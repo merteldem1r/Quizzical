@@ -1,0 +1,23 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Karla", sans-serif;
+}
+
+h1 {
+  color: #293264;
+}
+
+button {
+  cursor: pointer;
+  padding: 10px;
+  color: #F5F7FB;
+  border: none;
+  border-radius: 8px;
+}
