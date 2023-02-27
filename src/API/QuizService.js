@@ -6,7 +6,7 @@ export default class QuizService {
 
     try {
       const response = await fetch(
-        `https://opentdb.com/api.php?amount=${num}${urlSettings}`
+        `https://opentdb.com/api.php?amount=${num}${urlSettings}&encode=base64`
       );
       const data = await response.json();
       if (data.results.length === 0) throw new Error();
