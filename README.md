@@ -1,5 +1,5 @@
 # React Quizzical
-Quizzical is a quiz game with many features. Set your game settings, answer the questions and see your results. 
+Quizzical is a quiz game with many features. Set your game settings, answer the questions and see your results. Questions taken from the free Trivia database.
 
 https://merteldem1r-quizzical.netlify.app/
 
