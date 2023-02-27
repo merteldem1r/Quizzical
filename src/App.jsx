@@ -40,7 +40,7 @@ function App() {
   function resetQuiz() {
     setQuiz([]);
     setQuizSettings({
-      numOfQuestions: 5,
+      numOfQuestions: "5",
       category: "",
       difficulty: "",
       type: "",
