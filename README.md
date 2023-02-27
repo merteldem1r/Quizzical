@@ -4,7 +4,7 @@ Quizzical is a quiz game with many features. Set your game settings, answer the 
 https://merteldem1r-quizzical.netlify.app/
 
 React Features: 
-* Folder & File structure
+* Folder & File Structure
 * Components
 * Hooks & Custom Hooks
 * API
