@@ -17,7 +17,7 @@ function App() {
   });
   const [quiz, setQuiz] = useState([]);
   const [quizSettings, setQuizSettings] = useState({
-    numOfQuestions: 5,
+    numOfQuestions: "5",
     category: "",
     difficulty: "",
     type: "",
