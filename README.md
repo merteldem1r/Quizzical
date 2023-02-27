@@ -1,6 +1,8 @@
 # React Quizzical
 Quizzical is a quiz game with many features. Set your game settings, answer the questions and see your results. 
 
+https://merteldem1r-quizzical.netlify.app/
+
 React Features: 
 * Folder & File structure
 * Components
