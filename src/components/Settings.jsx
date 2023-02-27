@@ -10,7 +10,7 @@ export default function Settings({ quizSettings, setQuizSettings }) {
     const { name, value, checked } = e.target;
     setQuizSettings(prev => ({
       ...prev,
-      [name]: isFinite(value) ? +value : value,
+      [name]: value,
       isTimerDisabled: checked,
     }));
   }
