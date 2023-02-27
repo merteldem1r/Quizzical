@@ -50,8 +50,8 @@ export default function Quiz({
 
     // compare allUserAnswers with correct answers to get total correct count
     allUserAnswers.forEach((answ, i) => {
-      if (answ == quiz[i].correct_answer) correct++;
-      if (answ && answ != quiz[i].correct_answer) wrong++;
+      if (answ == atob(quiz[i].correct_answer)) correct++;
+      if (answ && answ != atob(quiz[i].correct_answer)) wrong++;
     });
 
     setCorrectCount(correct);
