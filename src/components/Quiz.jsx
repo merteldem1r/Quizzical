@@ -1,10 +1,9 @@
-import React, { useEffect, useState } from "react";
-import ThemeButton from "./UI/Theme Button/ThemeButton";
-import "../css/Quiz.css";
-import getCurrentDate from "../utils/getCurrentDate";
-import LocalStorage from "../utils/localStorage";
-import CountDown from "./CountDown";
-import Question from "./Question";
+import React, { useEffect, useState } from 'react';
+import ThemeButton from './UI/Theme Button/ThemeButton';
+import '../css/Quiz.css';
+import getCurrentDate from '../utils/getCurrentDate';
+import CountDown from './CountDown';
+import Question from './Question';
 
 export default function Quiz({
   setIsDarkMode,
@@ -14,7 +13,6 @@ export default function Quiz({
   fetchQuiz,
   resetQuiz,
   setError,
-  myResults,
   setMyResults,
 }) {
   const [isGameOver, setIsGameOver] = useState(false);
@@ -50,8 +48,8 @@ export default function Quiz({
 
     // compare allUserAnswers with correct answers to get total correct count
     allUserAnswers.forEach((answ, i) => {
-      if (answ == atob(quiz[i].correct_answer)) correct++;
-      if (answ && answ != atob(quiz[i].correct_answer)) wrong++;
+      if (answ === atob(quiz[i].correct_answer)) correct++;
+      if (answ && answ !== atob(quiz[i].correct_answer)) wrong++;
     });
 
     setCorrectCount(correct);
@@ -75,7 +73,6 @@ export default function Quiz({
         totalWrong: prev.totalWrong + wrong,
       };
     });
-    LocalStorage.set("myResults", myResults);
   }
 
   // play again with the same game settings

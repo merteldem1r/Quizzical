@@ -1,20 +1,13 @@
-import { useEffect, useMemo, useState } from "react";
-import QuizService from "./API/QuizService";
-import "./App.css";
-import Entry from "./components/Entry";
-import Quiz from "./components/Quiz";
-import { useFetching } from "./hooks/useFetching";
-import LocalStorage from "./utils/localStorage";
+import { useEffect, useState } from 'react';
+import QuizService from './API/QuizService';
+import './App.css';
+import Entry from './components/Entry';
+import Quiz from './components/Quiz';
+import { useFetching } from './hooks/useFetching';
+import { useLocalStorage } from './hooks/useLocalStorage.js';
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(true);
-  const [myResults, setMyResults] = useState({
-    lastGames: [],
-    totalGames: 0,
-    totalAnswers: 0,
-    totalCorrect: 0,
-    totalWrong: 0,
-  });
   const [quiz, setQuiz] = useState([]);
   const [quizSettings, setQuizSettings] = useState({
     numOfQuestions: "5",
@@ -29,17 +22,18 @@ function App() {
       setQuiz(data.results);
     }
   );
+  const INITIAL_RESULTS = {
+    lastGames: [],
+    totalGames: 0,
+    totalAnswers: 0,
+    totalCorrect: 0,
+    totalWrong: 0,
+  }
+  const [myResults, setMyResults] = useLocalStorage("myResults", INITIAL_RESULTS);
 
-  // set myResult from the local storage
-  useMemo(() => {
-    if (LocalStorage.get("myResults")) {
-      setMyResults(LocalStorage.get("myResults"));
-    }
-  }, []);
-
-  // save to local storage when results changes
+  // save results to local storage when they change
   useEffect(() => {
-    LocalStorage.set("myResults", myResults);
+    setMyResults(myResults);
   }, [myResults]);
 
   // reset quiz and settings
@@ -66,7 +60,6 @@ function App() {
             fetchQuiz={fetchQuiz}
             resetQuiz={resetQuiz}
             setError={setError}
-            myResults={myResults}
             setMyResults={setMyResults}
           />
         </div>
