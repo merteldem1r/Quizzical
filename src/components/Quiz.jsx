@@ -55,7 +55,7 @@ export default function Quiz({
     setCorrectCount(correct);
     setWrongCount(wrong);
 
-    // set results to local storage
+    // set results
     setMyResults(prev => {
       return {
         lastGames: [

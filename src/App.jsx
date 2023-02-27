@@ -31,7 +31,7 @@ function App() {
   }
   const [myResults, setMyResults] = useLocalStorage("myResults", INITIAL_RESULTS);
 
-  // save results to local storage when they change
+  // save results to local storage
   useEffect(() => {
     setMyResults(myResults);
   }, [myResults]);
