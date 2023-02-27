@@ -18,7 +18,6 @@ export default function Quiz({
   const [isGameOver, setIsGameOver] = useState(false);
   const [countdown, setCountdown] = useState(quizSettings.numOfQuestions * 15);
   const [correctCount, setCorrectCount] = useState(0);
-  const [wrongCount, setWrongCount] = useState(0);
   const [allUserAnswers, setAllUserAnswers] = useState(
     Array(quiz.length).fill(null)
   );
@@ -51,9 +50,7 @@ export default function Quiz({
       if (answ === atob(quiz[i].correct_answer)) correct++;
       if (answ && answ !== atob(quiz[i].correct_answer)) wrong++;
     });
-
     setCorrectCount(correct);
-    setWrongCount(wrong);
 
     // set results
     setMyResults(prev => {
