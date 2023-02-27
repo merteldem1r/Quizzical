@@ -14,8 +14,9 @@
 
 .games-container {
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
   gap: 15px;
+  min-height: 75px;
   max-height: 200px;
   overflow-y: scroll;
 }
