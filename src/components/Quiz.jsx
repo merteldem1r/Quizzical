@@ -114,9 +114,9 @@ export default function Quiz({
             <Question
               key={index}
               quesIndex={index}
-              question={ques.question}
-              correctAnswer={ques.correct_answer}
-              incorrectAnswers={ques.incorrect_answers}
+              question={atob(ques.question)}
+              correctAnswer={atob(ques.correct_answer)}
+              incorrectAnswers={ques.incorrect_answers.map(x => atob(x))}
               isGameOver={isGameOver}
               setAllUserAnswersFN={setAllUserAnswersFN}
             />
