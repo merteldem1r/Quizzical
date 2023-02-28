@@ -15,10 +15,10 @@ export default function CountDown({ countdown, setCountdown, isGameOver }) {
   }, []);
 
   const style = {
-    fontWeight: "600",
-    marginBottom: "10px",
+    fontWeight: "700",
+    marginBottom: "12px",
     alignSelf: "end",
-    fontSize: "23px",
+    fontSize: "25px",
   };
 
   return (
