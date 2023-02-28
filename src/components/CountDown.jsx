@@ -18,7 +18,7 @@ export default function CountDown({ countdown, setCountdown, isGameOver }) {
     fontWeight: "700",
     marginBottom: "12px",
     alignSelf: "end",
-    fontSize: "25px",
+    fontSize: "24px",
   };
 
   return (
