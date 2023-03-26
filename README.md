@@ -14,4 +14,4 @@ Features:
 * Game Logic
 
 # App Preview
-<img width="350" heigth="833" src="https://user-images.githubusercontent.com/113149328/227801702-f6da48f3-4bac-4f47-9d93-c212f42d246f.png"> <img width="350" heigth="833" src="https://user-images.githubusercontent.com/113149328/227801642-bb8326b5-cdfb-4b0f-ae0e-dd98d28250bb.png">
+<img width="350" heigth="833" src="https://user-images.githubusercontent.com/113149328/227801702-f6da48f3-4bac-4f47-9d93-c212f42d246f.png"><img width="350" heigth="833" src="https://user-images.githubusercontent.com/113149328/227801642-bb8326b5-cdfb-4b0f-ae0e-dd98d28250bb.png">
