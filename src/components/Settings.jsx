@@ -3,7 +3,7 @@ import "../css/Settings.css";
 import { quizCategories } from "../data/quizCategories";
 
 export default function Settings({ quizSettings, setQuizSettings }) {
-  const [isChecked, setIsChecked] = useState(false);
+  const [isChecked, setIsChecked] = useState(quizSettings.isTimerDisabled);
 
   // onChange setting to the settings object
   function setSettingFN(e) {
@@ -11,7 +11,7 @@ export default function Settings({ quizSettings, setQuizSettings }) {
     setQuizSettings(prev => ({
       ...prev,
       [name]: value,
-      isTimerDisabled: checked,
+      isTimerDisabled: typeof checked == "undefined" ? isChecked : checked,
     }));
   }
 
