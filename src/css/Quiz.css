@@ -40,7 +40,7 @@
   padding: 5px 15px;
   color: #293264;
   cursor: pointer;
-  outline: 1px solid #4d5b9e;
+  border: 1px solid #4d5b9e;
   border-radius: 8px;
   transition: all 0.1s linear;
 }
@@ -51,7 +51,7 @@
 
 .darkmode .option {
   color: #fff;
-  outline: 1px solid rgb(68, 68, 68);
+  border: 1px solid rgb(68, 68, 68);
 }
 
 .darkmode .option:hover {
