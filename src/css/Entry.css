@@ -80,6 +80,8 @@ section.entry {
 }
 
 .author-container {
+  min-width: 250px;
+  text-align: center;
   font-weight: 500;
   position: absolute;
   bottom: 15px;

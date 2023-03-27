@@ -45,7 +45,7 @@ export default function Question(props) {
                 props.correctAnswer
               )}
             >
-              {opt}
+              <span>{opt}</span>
             </div>
           );
         })}
