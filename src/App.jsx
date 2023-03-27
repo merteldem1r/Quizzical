@@ -23,7 +23,6 @@ function App() {
     }
   );
 
-  console.log(quizSettings)
   const INITIAL_RESULTS = {
     lastGames: [],
     totalGames: 0,
