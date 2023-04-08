@@ -14,10 +14,11 @@ export default function Question(props) {
     props.setAllUserAnswersFN(props.quesIndex, userAnswer);
   }, [userAnswer]);
 
-  // shuffle the options array
+  // shuffle the options array if it's not boolean question type
   useMemo(() => {
-    setOptions(shuffle(options));
-  }, [options]);
+    if (options.length === 2) setOptions(['True', 'False']);
+    else setOptions(shuffle(options));
+  }, []);
 
   // choose option event
   function chooseOption(opt) {
@@ -42,7 +43,7 @@ export default function Question(props) {
                 props.isGameOver,
                 opt,
                 userAnswer,
-                props.correctAnswer
+                props.correctAnswer,
               )}
             >
               <span>{opt}</span>
